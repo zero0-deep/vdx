@@ -3,66 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Platina පුංචා - Netharu</title>
+    <title>Netharu | Platina පුංචා</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
-        .profile-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
             text-align: center;
-            max-width: 500px;
+            max-width: 700px;
             width: 100%;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+            animation: fadeIn 1.5s ease;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .profile-pic {
-            width: 200px;
-            border-radius: 10px;
-            border: 5px solid #007bff;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #4ecca3;
+            box-shadow: 0 0 20px rgba(78, 204, 163, 0.5);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
         }
-        h1 { color: #333; margin-top: 15px; }
-        .nickname { color: #007bff; font-weight: bold; font-size: 1.2em; }
-        
-        .video-container {
-            margin-top: 30px;
-            width: 100%;
-            max-width: 600px;
+
+        .profile-pic:hover {
+            transform: scale(1.05);
         }
-        iframe {
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+            color: #4ecca3;
+        }
+
+        .nickname {
+            font-size: 1.2rem;
+            color: #eeeeee;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .video-section {
             width: 100%;
-            height: 315px;
-            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: none;
+        }
+
+        h3 {
+            margin-bottom: 15px;
+            font-weight: 300;
+            color: #4ecca3;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            opacity: 0.5;
         }
     </style>
 </head>
 <body>
 
-    <div class="profile-card">
+    <div class="container">
         <img src="0454867b-cb5a-47de-a42e-f5f08cde18a8.jpg" alt="Netharu" class="profile-pic">
         
         <h1>නෙතරු</h1>
-        <p class="nickname">Platina පුංචා</p>
-    </div>
+        <div class="nickname">Platina පුංචා</div>
 
-    <div class="video-container">
-        <h3> </h3>
-        <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" width="640" height="480"></iframe>
+        <div class="video-section">
+            <h3>Featured Video</h3>
+            <div class="video-wrapper">
+                <iframe src="https://drive.google.com/file/d/10mrtqFzBiajkOnNyQa7Da7-vYjJ9KC4q/preview" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <p class="footer">Created for Netharu by Platina</p>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
