@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Media Gallery</title>
+    <title>Platina Puncha - Media Gallery</title>
     <style>
         body {
             background-color: #0b0f19;
             color: #e2e8f0;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             padding: 30px;
             margin: 0;
         }
@@ -18,7 +18,35 @@
             margin: 0 auto;
         }
 
-        h1 { text-align: center; color: #60a5fa; font-weight: 300; }
+        /* Profile Section */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 50px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 30px;
+        }
+
+        .main-dp {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #60a5fa;
+            box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+            margin-bottom: 15px;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            color: #ffffff;
+            margin: 10px 0;
+            letter-spacing: 1px;
+        }
+
+        h1 { text-align: center; color: #60a5fa; font-weight: 300; margin-top: 20px; }
 
         .media-grid {
             display: grid;
@@ -36,7 +64,10 @@
             border: 1px solid #334155;
         }
 
-        .media-card:hover { transform: translateY(-5px); border-color: #60a5fa; }
+        .media-card:hover { 
+            transform: translateY(-5px); 
+            border-color: #60a5fa; 
+        }
 
         /* Embed Container */
         .responsive-container {
@@ -58,45 +89,57 @@
         }
 
         .label { padding: 15px; text-align: center; font-size: 14px; color: #94a3b8; }
+
+        /* Mobile Adjustments */
+        @media (max-width: 600px) {
+            .main-dp { width: 120px; height: 120px; }
+            .profile-name { font-size: 1.5rem; }
+        }
     </style>
 </head>
 <body>
 
 <div class="gallery-container">
+    
+    <div class="profile-section">
+        <img src="0454867b-cb5a-47de-a42e-f5f08cde18a8.jpg" alt="Platina Puncha" class="main-dp">
+        <div class="profile-name">Platina Puncha</div>
+    </div>
+
     <h1>Exclusive Media Gallery</h1>
 
     <div class="media-grid">
         <div class="media-card">
             <div class="responsive-container">
-                <iframe src="https://drive.google.com/file/d/1ZpL7GpQjahn-NLe0MC0U4BrpNGcfShIt/preview"></iframe>
+                <iframe src="https://drive.google.com/file/d/ඔබේ_වීඩියෝ_ID_1_මෙතනට/preview"></iframe>
             </div>
             <div class="label">Professional Video 01</div>
         </div>
 
         <div class="media-card">
             <div class="responsive-container">
-                <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview"></iframe>
+                <iframe src="https://drive.google.com/file/d/ඔබේ_වීඩියෝ_ID_2_මෙතනට/preview"></iframe>
             </div>
             <div class="label">Professional Video 02</div>
         </div>
 
         <div class="media-card">
             <div class="responsive-container">
-                <iframe src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview"></iframe>
+                <iframe src="https://drive.google.com/file/d/ඔබේ_පින්තූර_ID_1_මෙතනට/preview"></iframe>
             </div>
             <div class="label">High Quality Photo 01</div>
         </div>
 
         <div class="media-card">
             <div class="responsive-container">
-                <iframe src="https://drive.google.com/file/d/1SAyCtC7fk6N3MSpyJDF-LwYkKlcifdAU/preview"></iframe>
+                <iframe src="https://drive.google.com/file/d/ඔබේ_පින්තූර_ID_2_මෙතනට/preview"></iframe>
             </div>
             <div class="label">High Quality Photo 02</div>
         </div>
 
         <div class="media-card">
             <div class="responsive-container">
-                <iframe src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview"></iframe>
+                <iframe src="https://drive.google.com/file/d/ඔබේ_පින්තූර_ID_3_මෙතනට/preview"></iframe>
             </div>
             <div class="label">High Quality Photo 03</div>
         </div>
