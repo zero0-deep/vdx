@@ -3,109 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netharu Pancha</title>
+    <title>My Professional Gallery</title>
     <style>
-        /* මුළු පිටුවේම පෙනුම */
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-color: #f8fafc;
+        }
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 20px;
-            text-align: center;
         }
-
-        h1 { color: #333; margin-bottom: 30px; }
 
         .container {
-            max-width: 1000px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Card එකක සැලැස්ම */
-        .card-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        h1 {
+            text-align: center;
+            color: #38bdf8;
+            font-weight: 300;
             margin-bottom: 40px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card iframe, .card img {
-            width: 100%;
-            height: 200px;
-            border: none;
-            display: block;
-        }
-
-        .card-title {
-            padding: 15px;
-            font-weight: bold;
-            color: #444;
-            background: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .section-title {
-            font-size: 24px;
-            margin: 20px 0;
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            display: inline-block;
-            padding-bottom: 5px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            margin: 40px 0 20px;
+            font-size: 1.5rem;
         }
+
+        /* Gallery Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img, .card video {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-content p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>Gallery</h1>
+<div class="container">
+    <h1>My Creative Gallery</h1>
 
-    <div class="container">
-        
-        <div class="section-title">Video</div>
-        <div class="card-container">
-            <div class="card">
-                <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview"></iframe>
-                <div class="card-title">01</div>
-            </div>
-
-            <div class="card">
-                <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview"></iframe>
-                <div class="card-title">02</div>
-            </div>
+    <div class="section-title">Featured Videos</div>
+    <div class="grid">
+        <div class="card">
+            <video controls>
+                <source src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="card-content"><p>Cinematic Video 01</p></div>
         </div>
-
-        <div class="section-title">Photos</div>
-        <div class="card-container">
-            <div class="card">
-                <img src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" alt="Photo 1">
-                <div class="card-title">01</div>
-            </div>
-
-            <div class="card">
-                <iframe src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview" </iframe>
-                <div class="card-title">02</div>
-            </div>
-
-            <div class="card">
-                <img src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview" alt="Photo 3">
-                <div class="card-title">03</div>
-            </div>
+        <div class="card">
+            <video controls>
+                <source src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" type="video/mp4">
+            </video>
+            <div class="card-content"><p>Cinematic Video 02</p></div>
         </div>
-
     </div>
+
+    <div class="section-title">Photography</div>
+    <div class="grid">
+        <div class="card">
+            <img src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview" alt="Photo 1">
+            <div class="card-content"><p>Nature Shot 01</p></div>
+        </div>
+        <div class="card">
+            <img src="https://drive.google.com/file/d/1SAyCtC7fk6N3MSpyJDF-LwYkKlcifdAU/preview" alt="Photo 2">
+            <div class="card-content"><p>Architecture 02</p></div>
+        </div>
+        <div class="card">
+            <img src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview" alt="Photo 3">
+            <div class="card-content"><p>Portrait 03</p></div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
-
-
-
