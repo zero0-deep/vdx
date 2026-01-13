@@ -3,127 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netharu | Photo Gallery</title>
+    <title>මගේ වීඩියෝ සහ ඡායාරූප</title>
     <style>
-        * {
+        /* මුළු පිටුවේම පෙනුම */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
             margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
         }
 
-        body {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            color: white;
-        }
+        h1 { color: #333; margin-bottom: 30px; }
 
         .container {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 30px;
-            padding: 30px 20px;
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            max-width: 1000px;
+            margin: auto;
         }
 
-        .profile-img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #38bdf8;
-            margin-bottom: 10px;
+        /* Card එකක සැලැස්ම */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
         }
 
-        h1 { font-size: 20px; margin-bottom: 5px; }
-        .nickname { color: #38bdf8; font-size: 14px; margin-bottom: 25px; display: block; }
-
-        /* ෆොටෝ එකක් ලෙස පෙන්වන Frame එක */
-        .image-box {
-            position: relative;
-            width: 100%;
-            height: 250px; /* ඔබට අවශ්‍ය උස මෙතැනින් වෙනස් කරන්න */
-            margin-bottom: 20px;
+        .card {
+            background: white;
             border-radius: 15px;
             overflow: hidden;
-            background: #000;
-            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
         }
 
-        /* Google Drive preview එකේ අනවශ්‍ය දේවල් වසා දැමීම (No Zoom effect) */
-        .image-box iframe {
-            position: absolute;
-            top: -50px; /* උඩ තීරුව ඉවත් කිරීමට */
-            left: 0;
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card iframe, .card img {
             width: 100%;
-            height: calc(100% + 100px); /* සම්පූර්ණයෙන් පිරවීමට */
+            height: 200px;
             border: none;
-            pointer-events: none; /* User ට zoom කිරීම වැලැක්වීමට */
-        }
-
-        /* Overlay එකක් දැමීම මගින් ඇල්ලීමට නොහැකි කිරීම */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            background: transparent;
-        }
-
-        .label {
             display: block;
-            text-align: left;
-            font-size: 11px;
-            color: #94a3b8;
-            margin: 0 0 8px 5px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
         }
 
-        .footer {
-            margin-top: 20px;
-            font-size: 9px;
-            opacity: 0.4;
-            letter-spacing: 2px;
+        .card-title {
+            padding: 15px;
+            font-weight: bold;
+            color: #444;
+            background: #fff;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            display: inline-block;
+            padding-bottom: 5px;
         }
     </style>
 </head>
 <body>
 
+    <h1>මගේ ගැලරිය</h1>
+
     <div class="container">
-        <img src="0454867b-cb5a-47de-a42e-f5f08cde18a8.jpg" alt="Netharu" class="profile-img">
-        <h1>Netharu</h1>
-        <span class="nickname">Platina Puncha</span>
+        
+        <div class="section-title">වීඩියෝ දර්ශන</div>
+        <div class="card-container">
+            <div class="card">
+                <iframe src="ඔබේ_වීඩියෝ_LINK_එක_මෙහි_දමන්න"></iframe>
+                <div class="card-title">https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview</div>
+            </div>
 
-        <span class="label">Photo 01</span>
-        <div class="image-box">
-            <div class="overlay"></div>
-            <iframe src="https://drive.google.com/file/d/1ZpL7GpQjahn-NLe0MC0U4BrpNGcfShIt/preview"></iframe>
+            <div class="card">
+                <iframe src="ඔබේ_වීඩියෝ_LINK_එක_මෙහි_දමන්න"></iframe>
+                <div class="card-title">https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview</div>
+            </div>
         </div>
 
-        <span class="label">Photo 02</span>
-        <div class="image-box">
-            <div class="overlay"></div>
-            <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview"></iframe>
+        <div class="section-title">ඡායාරූප</div>
+        <div class="card-container">
+            <div class="card">
+                <img src="ඔබේ_පින්තූර_LINK_එක_මෙහි_දමන්න" alt="Photo 1">
+                <div class="card-title">https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview</div>
+            </div>
+
+            <div class="card">
+                <img src="ඔබේ_පින්තූර_LINK_එක_මෙහි_දමන්න" alt="Photo 2">
+                <div class="card-title">https://drive.google.com/file/d/1SAyCtC7fk6N3MSpyJDF-LwYkKlcifdAU/preview</div>
+            </div>
+
+            <div class="card">
+                <img src="ඔබේ_පින්තූර_LINK_එක_මෙහි_දමන්න" alt="Photo 3">
+                <div class="card-title">https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview</div>
+            </div>
         </div>
 
-        <span class="label">Photo 03</span>
-        <div class="image-box">
-            <div class="overlay"></div>
-            <iframe src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview"></iframe>
-        </div>
-
-        <p class="footer">CREATION BY SUBHASH</p>
     </div>
 
 </body>
