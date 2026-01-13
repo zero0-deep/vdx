@@ -18,7 +18,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 10px; /* පිටතින් පොඩි ඉඩක් */
+            padding: 15px;
             color: white;
         }
 
@@ -28,7 +28,7 @@
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 25px;
-            padding: 20px 15px; /* දෙපැත්තෙන් ඉඩ තැබුවා */
+            padding: 25px 15px;
             width: 100%;
             max-width: 480px;
             text-align: center;
@@ -58,15 +58,15 @@
             text-transform: uppercase;
         }
 
-        /* වීඩියෝව පෝන් එකට ගැලපෙන සහ බොත්තම් එබීමට පහසු වන ලෙස සකස් කිරීම */
+        /* වීඩියෝව ඕනෑම තිරයකට ගැලපෙන ලෙස (Responsive) */
         .video-wrapper {
             position: relative;
-            width: 95%; /* 100% වෙනුවට 95% කර දෙපැත්තෙන් ඉඩ තැබුවා */
-            margin: 0 auto 20px auto; /* මැදට ගත්තා */
+            width: 100%;
+            margin-bottom: 20px;
             background: #000;
             border-radius: 12px;
             overflow: hidden;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 9; /* 16:9 අනුපාතයට ස්වයංක්‍රීයව හැදේ */
             box-shadow: 0 10px 20px rgba(0,0,0,0.4);
             border: 1px solid rgba(255,255,255,0.05);
         }
@@ -81,16 +81,11 @@
         }
 
         .footer {
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 10px;
-            opacity: 0.4;
+            opacity: 0.5;
             letter-spacing: 1px;
-        }
-
-        /* පෝන් එක කුඩා වෙද්දී තවත් පහසු කිරීමට */
-        @media (max-width: 380px) {
-            .container { padding: 15px 10px; }
-            .video-wrapper { width: 98%; }
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -98,7 +93,6 @@
 
     <div class="container">
         <img src="0454867b-cb5a-47de-a42e-f5f08cde18a8.jpg" alt="Netharu" class="profile-img">
-        
         <h1>Netharu</h1>
         <span class="nickname">Platina Puncha</span>
 
@@ -118,13 +112,16 @@
                 allow="autoplay; fullscreen" 
                 allowfullscreen="true">
             </iframe>
-            
         </div>
-        
-        <div class="container">
-             <iframe
-                src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview" width="390" height="330">
+
+        <span class="video-label">Video 03</span>
+        <div class="video-wrapper">
+            <iframe 
+                src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview" 
+                allow="autoplay; fullscreen" 
+                allowfullscreen="true">
             </iframe>
+        </div>
 
         <p class="footer">CREATION BY SUBHASH</p>
     </div>
