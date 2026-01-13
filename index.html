@@ -3,119 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Professional Gallery</title>
+    <title>Pro Media Gallery</title>
     <style>
-        :root {
-            --primary-color: #2563eb;
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-color: #f8fafc;
-        }
-
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            background-color: #0b0f19;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 30px;
             margin: 0;
-            padding: 20px;
         }
 
-        .container {
-            max-width: 1200px;
+        .gallery-container {
+            max-width: 1100px;
             margin: 0 auto;
         }
 
-        h1 {
-            text-align: center;
-            color: #38bdf8;
-            font-weight: 300;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+        h1 { text-align: center; color: #60a5fa; font-weight: 300; }
 
-        .section-title {
-            border-left: 4px solid var(--primary-color);
-            padding-left: 15px;
-            margin: 40px 0 20px;
-            font-size: 1.5rem;
-        }
-
-        /* Gallery Grid Layout */
-        .grid {
+        .media-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
+            margin-top: 40px;
         }
 
-        .card {
-            background: var(--card-bg);
+        .media-card {
+            background: #1e293b;
             border-radius: 15px;
             overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: 0.3s;
+            border: 1px solid #334155;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
+        .media-card:hover { transform: translateY(-5px); border-color: #60a5fa; }
 
-        .card img, .card video {
+        /* Embed Container */
+        .responsive-container {
+            position: relative;
+            overflow: hidden;
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
         }
 
-        .card-content {
-            padding: 15px;
-            text-align: center;
+        .responsive-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
-        .card-content p {
-            margin: 0;
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
+        .label { padding: 15px; text-align: center; font-size: 14px; color: #94a3b8; }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>My Creative Gallery</h1>
+<div class="gallery-container">
+    <h1>Exclusive Media Gallery</h1>
 
-    <div class="section-title">Featured Videos</div>
-    <div class="grid">
-        <div class="card">
-            <video controls>
-                <source src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="card-content"><p>Cinematic Video 01</p></div>
+    <div class="media-grid">
+        <div class="media-card">
+            <div class="responsive-container">
+                <iframe src="https://drive.google.com/file/d/1ZpL7GpQjahn-NLe0MC0U4BrpNGcfShIt/preview"></iframe>
+            </div>
+            <div class="label">Professional Video 01</div>
         </div>
-        <div class="card">
-            <video controls>
-                <source src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview" type="video/mp4">
-            </video>
-            <div class="card-content"><p>Cinematic Video 02</p></div>
-        </div>
-    </div>
 
-    <div class="section-title">Photography</div>
-    <div class="grid">
-        <div class="card">
-            <img src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview" alt="Photo 1">
-            <div class="card-content"><p>Nature Shot 01</p></div>
+        <div class="media-card">
+            <div class="responsive-container">
+                <iframe src="https://drive.google.com/file/d/1Jgy44z6HTuzoK4RjtB7oX-U-W8DBuC7O/preview"></iframe>
+            </div>
+            <div class="label">Professional Video 02</div>
         </div>
-        <div class="card">
-            <img src="https://drive.google.com/file/d/1SAyCtC7fk6N3MSpyJDF-LwYkKlcifdAU/preview" alt="Photo 2">
-            <div class="card-content"><p>Architecture 02</p></div>
+
+        <div class="media-card">
+            <div class="responsive-container">
+                <iframe src="https://drive.google.com/file/d/1USWVE1o3OLhkY2NBcLvnd_uG1o-EhK9o/preview"></iframe>
+            </div>
+            <div class="label">High Quality Photo 01</div>
         </div>
-        <div class="card">
-            <img src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview" alt="Photo 3">
-            <div class="card-content"><p>Portrait 03</p></div>
+
+        <div class="media-card">
+            <div class="responsive-container">
+                <iframe src="https://drive.google.com/file/d/1SAyCtC7fk6N3MSpyJDF-LwYkKlcifdAU/preview"></iframe>
+            </div>
+            <div class="label">High Quality Photo 02</div>
+        </div>
+
+        <div class="media-card">
+            <div class="responsive-container">
+                <iframe src="https://drive.google.com/file/d/1o8Hefqpq7Uggoofd5DCrcSSI0ZMzukgl/preview"></iframe>
+            </div>
+            <div class="label">High Quality Photo 03</div>
         </div>
     </div>
 </div>
